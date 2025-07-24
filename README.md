@@ -19,35 +19,27 @@ Alethes provides:
 
 ## Installation
 ```bash
-git clone https://github.com/your-org/alethes.git
+git clone https://github.com/PYLON-AI-Labs/alethes.git
 cd alethes
 python -m venv .venv && source .venv/bin/activate
 pip install -U pip
 pip install -r requirements.txt
 pip install -e .
-
+```
 ## Generate an Article
-bash
-Copy
-Edit
-python -m alethes.cli.generate \
-  --model_name_or_path gpt2 \
-  --title "Breakthrough in Battery Technology Slashes Charging Time" \
-  --domain technology --date 2025-07-24 --authors "Jane Doe"
+```bash
+python -m alethes.cli.generate
+```
 
 ## Detect Synthetic Text
-bash
-Copy
-Edit
-python -m alethes.cli.detect \
-  --model_name_or_path roberta-base \
-  --input_file examples/articles.jsonl \
-  --output_file results/predictions.jsonl
-Each output line contains JSON: {"id": "...", "score": 0.83, "is_synthetic": true}.
+```bash
+python -m alethes.cli.detect 
+```
 
-
-##Edit
+## Edit
+```
 pip install -r requirements-dev.txt
 pytest -q
-License
+```
+## License
 Alethes is licensed under the Apache 2.0 License. See LICENSE and NOTICE for details.
