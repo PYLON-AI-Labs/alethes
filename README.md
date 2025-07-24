@@ -26,7 +26,7 @@ pip install -U pip
 pip install -r requirements.txt
 pip install -e .
 
-Generate an Article
+## Generate an Article
 bash
 Copy
 Edit
@@ -34,7 +34,8 @@ python -m alethes.cli.generate \
   --model_name_or_path gpt2 \
   --title "Breakthrough in Battery Technology Slashes Charging Time" \
   --domain technology --date 2025-07-24 --authors "Jane Doe"
-Detect Synthetic Text
+
+## Detect Synthetic Text
 bash
 Copy
 Edit
@@ -44,30 +45,9 @@ python -m alethes.cli.detect \
   --output_file results/predictions.jsonl
 Each output line contains JSON: {"id": "...", "score": 0.83, "is_synthetic": true}.
 
-Project Structure
-kotlin
-Copy
-Edit
-alethes/
-  alethes/
-    generator/
-    discriminator/
-    cli/
-    data/
-    utils/
-  tests/
-Development
-bash
-Copy
-Edit
+
+##Edit
 pip install -r requirements-dev.txt
 pytest -q
 License
 Alethes is licensed under the Apache 2.0 License. See LICENSE and NOTICE for details.
-
-perl
-Copy
-Edit
-
-Save/commit the file, then say **“done”** and we’ll continue to `requirements.txt`.
-::contentReference[oaicite:0]{index=0}
